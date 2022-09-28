@@ -7,9 +7,10 @@ import * as serviceWorker from "./serviceWorker";
 import "normalize.css/normalize.css";
 import "./index.css";
 import amplifyConfig from "./aws-exports";
+import { Auth } from "aws-amplify";
 
 Amplify.configure(amplifyConfig);
-
+Auth.configure(amplifyConfig);
 ReactDOM.render(<App />, document.getElementById("root"));
 
 // If you want your app to work offline and load faster, you can change
